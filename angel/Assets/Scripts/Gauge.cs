@@ -19,10 +19,10 @@ public class Gauge : MonoBehaviour {
 
     public void JumpBarVisualize(float rate)
     {
-        GaugeFront.transform.localScale.Set(rate, 1.0f, 1.0f);
+        GaugeFront.transform.localScale = new Vector3(rate, 1.0f, 1.0f);
         //位置を左に合わせる
         Vector3 tmpPosition = GaugeFront.transform.localPosition;
-        tmpPosition.x -= BarSize * (1.0f - rate);
+        tmpPosition.x = -1 * BarSize * (1.0f - rate);
         GaugeFront.transform.localPosition = tmpPosition;
     }
 }

@@ -48,12 +48,12 @@ public class CGameManager : MonoBehaviour {
 
         refGauge = Instantiate(JumpGauge, new Vector3(-11f, 6f, 15f), Quaternion.identity) as GameObject;
         refGauge.name = JumpGauge.name;
-//        refGauge.transform.parent = 
+        refGauge.transform.parent = GameObject.Find("Main Camera").transform;
     }
 
 	// Update is called once per frame
 	void Update () {
-        refGauge.GetComponent<Gauge>().JumpBarVisualize(Peco.GetComponent<Peco>().GetJumpEnergyRate());
+        refGauge.GetComponent<Gauge>().JumpBarVisualize(refPeco.GetComponent<Peco>().GetJumpEnergyRate());
 	}
 
 }
