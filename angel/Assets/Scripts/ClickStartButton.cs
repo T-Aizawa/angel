@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ClickStartButton : MonoBehaviour {
 	public void StartButton() {
-		Debug.Log("mannse-");
 		SceneManager.LoadScene("play");
 	}
 }

@@ -18,7 +18,7 @@ public class CGameManager : MonoBehaviour {
         CreateObject();
 
 	}
-	
+
     void CreateObject()
     {
         CreateFloors();
@@ -46,7 +46,7 @@ public class CGameManager : MonoBehaviour {
         refPeco = Instantiate(Peco, new Vector3(0f, -3f, 0f), Quaternion.identity) as GameObject;
         refPeco.name = Peco.name;
 
-        refGauge = Instantiate(JumpGauge, new Vector3(-11f, 6f, 15f), Quaternion.identity) as GameObject;
+        refGauge = Instantiate(JumpGauge, new Vector3(-8f, 6f, 15f), Quaternion.identity) as GameObject;
         refGauge.name = JumpGauge.name;
         refGauge.transform.parent = GameObject.Find("Main Camera").transform;
     }
