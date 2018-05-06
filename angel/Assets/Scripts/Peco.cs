@@ -35,6 +35,14 @@ public class Peco : MonoBehaviour
                 jumpEnergy -= 1;
             }
         }
+        if(GetComponent<Rigidbody2D>().velocity.y > float.Epsilon || GetComponent<Rigidbody2D>().velocity.y < -1 * float.Epsilon)
+        {
+            GetComponent<Animator>().SetBool("IsJump", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("IsJump", false);                
+        }
 
 	}
 
