@@ -10,8 +10,8 @@ public class Peco : MonoBehaviour
 	public float speedX = 5;
 	public float speedY = 7;
 
-  public int jumpEnergyMax = 30;
-  private int jumpEnergy;
+    public int jumpEnergyMax = 30;
+    private int jumpEnergy;
 
 	private void Start()
 	{
@@ -41,5 +41,18 @@ public class Peco : MonoBehaviour
     void OnTriggerEnter2D(Collider2D c)
     {
         jumpEnergy = jumpEnergyMax;
+    }
+
+    public int GetJumpEnergy()
+    {
+        return jumpEnergy;
+    }
+    public int GetJumpEnergyMax()
+    {
+        return jumpEnergyMax;
+    }
+    public float GetJumpEnergyRate()
+    {
+        return ((float)jumpEnergy / (float)jumpEnergyMax);
     }
 }
