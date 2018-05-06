@@ -10,13 +10,12 @@ public class Peco : MonoBehaviour
 	public float speedX = 5;
 	public float speedY = 7;
 
-    public int jumpEnergyMax = 30;
-
-    private int jumpEnergy;
+  public int jumpEnergyMax = 30;
+  private int jumpEnergy;
 
 	private void Start()
 	{
-        jumpEnergy = jumpEnergyMax;
+      jumpEnergy = jumpEnergyMax;
 	}
 
 	void Update ()
@@ -28,9 +27,7 @@ public class Peco : MonoBehaviour
 
 
         // ジャンプ
-        if (Input.GetKey("space"))
-//        if(Input.GetButton("Jump"))
-        {
+        if (Input.GetKey("space")) {
             if(jumpEnergy > 0)
             {
                 Vector2 jump = new Vector2(0, 1).normalized;
