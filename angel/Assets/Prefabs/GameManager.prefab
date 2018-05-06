@@ -51,5 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ccfa2cbb5264f78940b5286c4a01ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Peco: {fileID: 1825441743149616, guid: 4354bbf85fc84488081a3366b829c365, type: 2}
+  JumpGauge: {fileID: 1841794570101858, guid: 2b8be315dd5af4569a95215fa978778a, type: 2}
   Ground: {fileID: 1414921084106580, guid: bffe352d5d061465cb3dba2db5157044, type: 2}
   Floor: {fileID: 1408583780900040, guid: 1af3015229cfb4f12bcb785c8763209a, type: 2}
