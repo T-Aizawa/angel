@@ -48,6 +48,13 @@ public class Peco : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c)
     {
+		// レイヤー名を取得
+		string layerName = LayerMask.LayerToName(c.gameObject.layer);
+
+		// レイヤーがFoot,Groundでなければ何もしない
+		if ( layerName != "Foot" && layerName != "Ground" ) return;
+
+		// ジャンプ力の回復
         jumpEnergy = jumpEnergyMax;
     }
 
