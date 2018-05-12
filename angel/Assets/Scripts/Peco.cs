@@ -48,7 +48,14 @@ public class Peco : MonoBehaviour
         //回転
         if(Input.GetKey(KeyCode.Z))
         {
-            GetComponent<Rigidbody2D>().angularVelocity += speedT;   
+            if (GetComponent<Rigidbody2D>().angularVelocity > speedT)
+            {
+                GetComponent<Rigidbody2D>().angularVelocity = speedT;
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().angularVelocity += speedT;
+            }
         }
 	}
 
