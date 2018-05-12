@@ -9,6 +9,7 @@ public class Peco : MonoBehaviour
 	// スピード
 	public float speedX = 5;
 	public float speedY = 7;
+    public float speedT = 10000;
 
     public int jumpEnergyMax = 30;
     private int jumpEnergy;
@@ -44,6 +45,11 @@ public class Peco : MonoBehaviour
             GetComponent<Animator>().SetBool("IsJump", false);                
         }
 
+        //回転
+        if(Input.GetKey(KeyCode.Z))
+        {
+            GetComponent<Rigidbody2D>().angularVelocity += speedT;   
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D c)
