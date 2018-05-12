@@ -21,7 +21,7 @@ public class Deadline : MonoBehaviour {
 		if( layerName == "Peco")
         {
             // GameOverのシーンへ移行
-			SceneManager.LoadScene("play");
+			SceneManager.LoadScene("Title");
         }
 	}
 }

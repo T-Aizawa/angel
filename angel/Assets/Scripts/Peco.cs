@@ -7,11 +7,11 @@ using UnityEngine;
 public class Peco : MonoBehaviour
 {
 	// スピード
-	public float speedX = 5;
-	public float speedY = 7;
-    public float speedT = 10000;
+	public float speedX;
+	public float speedY;
+    public float speedT;
 
-    public int jumpEnergyMax = 30;
+    public int jumpEnergyMax;
     private int jumpEnergy;
 
 	private void Start()
@@ -42,7 +42,7 @@ public class Peco : MonoBehaviour
         }
         else
         {
-            GetComponent<Animator>().SetBool("IsJump", false);                
+            GetComponent<Animator>().SetBool("IsJump", false);
         }
 
         //回転
