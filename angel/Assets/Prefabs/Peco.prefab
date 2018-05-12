@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 5
   speedY: 10
+  speedT: 1000
   jumpEnergyMax: 50
 --- !u!212 &212499005768348958
 SpriteRenderer:

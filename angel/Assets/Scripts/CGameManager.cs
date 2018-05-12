@@ -54,6 +54,10 @@ public class CGameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         refGauge.GetComponent<Gauge>().JumpBarVisualize(refPeco.GetComponent<Peco>().GetJumpEnergyRate());
+        if(Input.GetKey(KeyCode.R))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
 	}
 
 }
